@@ -52,7 +52,7 @@ with st.sidebar:
 
     # Plot the data and linear fit
     fig, ax = plt.subplots()
-    ax.errorbar(mean_height, df1['volume'], yerr=std_height, fmt='o', ecolor='black', capsize=5, label='Measurements', color='black', alpha=0.9, linewidth=2)
+    ax.errorbar(mean_height, df1['volume'], xerr=std_height, fmt='o', ecolor='black', capsize=5, label='Measurements', color='black', alpha=0.9, linewidth=2)
     heights_for_line = np.linspace(min(mean_height), max(mean_height), 100)
     ax.plot(heights_for_line, volume_from_height(heights_for_line, slope, intercept), 'black', label='Linear Fit', alpha=0.7, linewidth=1, linestyle='-.')
     ax.set_xlabel('Height (cm)')
