@@ -40,7 +40,7 @@ st.markdown("""
             """)
 
 # Main page for input
-input_height = st.number_input("Enter the height (cm):", min_value=0.0, value=2.7, step=0.1)
+input_height = st.number_input("Enter the height (cm):", min_value=0.0, value=2.7, step=0.1, max_value=2.7)
 
 # Calculate volume using the input height
 calculated_volume = volume_from_height(input_height, slope, intercept)
